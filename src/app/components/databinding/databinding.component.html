@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-4">one ways data binding .ts and html</div>
+  <div class="col-4"></div>
+  <div class="col-4"></div>
+</div>
+
+<div class="row">
+  <div class="col-4">
+    <div class="row">
+      <div class="col-5 bg-success">
+        interpolation
+        <h2>{{ courseName }}</h2>
+        <div>{{ inputTpe }}</div>
+        <input type="text" value="{{ courseName }}" placeholder="enter text" />
+     
+        <input type="{{ inputTpe }}" />
+         </div>
+    </div>
+  </div>
+  <div class="col-4">
+    binding with property
+    <div [class]="myClassName"> danger</div>
+    <input type="text" [value]="courseName">
+    <div [class]="inputTpe"></div>
+    <input [type]="">
+  </div>
+  <div class="col-4">
+event binding 
+<div>
+    <div class="col-4">
+        <button class="btn btn-success" (click)="showAlert('welcome to angular18')">show welcome</button>
+<span  (click)="showAlert('this wrong ways')">click me</span>
+    </div>
+</div>
+
+<div class="col-4">
+    <div>
+        <button class="btn btn-success" (click)="showAlertsucc()"> show sucessmsg</button>
+    </div>
+<div class="btn btn-warning" (click)="showAlertwarning('your procedure complete but check ')"> show warning</div>
+</div>
+<div class="col-4">
+    <div>{{Count}}</div>
+    <div class="btn btn-success" (click)="incrementcount()">count increment</div>
+    <div class="col-4">
+        <div class="bg-gray">{{countdec}}</div>
+        <div class="btn btn-warning" (click)="decrementCount()">dec count</div>
+        <div class="btn btn-success" (click)="showingpop('there is input')"> clickme</div>
+    </div>
+</div>
+<div class="col-4">
+    two ways data winding 
+    <div class="btn btn-success" (click)="changeCourseName()"> change course </div>
+</div>
+<div class="col-4">
+<input type="text" [(ngModel)]="courseName"/> - {{courseName}}
+<select [(ngModel)]=" selectStateName" >
+    <option value="">select</option>
+    <option value="mahrastra">mahrastra</option>
+    <option value="Goa">Goa</option>
+    <option value="Bihar">Bihar</option>
+
+</select>
+<input type="checkbox" [(ngModel)]="isIndian"/>
+
+</div>
+  </div>
+</div>
+
